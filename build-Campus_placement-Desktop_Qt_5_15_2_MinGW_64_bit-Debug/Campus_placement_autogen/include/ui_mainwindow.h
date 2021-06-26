@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHeaderView>
@@ -34,20 +35,22 @@ public:
     QAction *actionAbout;
     QWidget *centralwidget;
     QGridLayout *gridLayout;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_5;
-    QTableView *tableView;
-    QPushButton *pushButton_3;
     QSpacerItem *horizontalSpacer_3;
     QPushButton *pushButton_6;
-    QPushButton *pushButton_4;
-    QSpacerItem *horizontalSpacer;
+    QPushButton *pushButton_2;
     QSpacerItem *horizontalSpacer_2;
-    QSpacerItem *horizontalSpacer_4;
-    QPushButton *pushButton;
+    QPushButton *pushButton_5;
     QLabel *label;
-    QLineEdit *lineEdit;
     QComboBox *comboBox;
+    QPushButton *pushButton_3;
+    QLineEdit *lineEdit;
+    QSpacerItem *horizontalSpacer;
+    QCheckBox *checkBox;
+    QPushButton *pushButton_4;
+    QPushButton *pushButton;
+    QSpacerItem *horizontalSpacer_4;
+    QTableView *tableView;
+    QCheckBox *checkBox_2;
     QMenuBar *menubar;
     QMenu *menuHelp;
     QStatusBar *statusbar;
@@ -68,15 +71,80 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         gridLayout = new QGridLayout(centralwidget);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer_3, 2, 1, 1, 1);
+
+        pushButton_6 = new QPushButton(centralwidget);
+        pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
+
+        gridLayout->addWidget(pushButton_6, 2, 5, 1, 1);
+
         pushButton_2 = new QPushButton(centralwidget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
 
         gridLayout->addWidget(pushButton_2, 0, 2, 1, 1);
 
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer_2, 0, 4, 1, 1);
+
         pushButton_5 = new QPushButton(centralwidget);
         pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
 
         gridLayout->addWidget(pushButton_5, 2, 2, 1, 1);
+
+        label = new QLabel(centralwidget);
+        label->setObjectName(QString::fromUtf8("label"));
+        QFont font;
+        font.setBold(true);
+        font.setWeight(75);
+        label->setFont(font);
+
+        gridLayout->addWidget(label, 3, 0, 1, 1);
+
+        comboBox = new QComboBox(centralwidget);
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->addItem(QString());
+        comboBox->setObjectName(QString::fromUtf8("comboBox"));
+
+        gridLayout->addWidget(comboBox, 3, 2, 1, 1);
+
+        pushButton_3 = new QPushButton(centralwidget);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+
+        gridLayout->addWidget(pushButton_3, 0, 5, 1, 1);
+
+        lineEdit = new QLineEdit(centralwidget);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+
+        gridLayout->addWidget(lineEdit, 3, 1, 1, 1);
+
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer, 0, 1, 1, 1);
+
+        checkBox = new QCheckBox(centralwidget);
+        checkBox->setObjectName(QString::fromUtf8("checkBox"));
+
+        gridLayout->addWidget(checkBox, 3, 4, 1, 1);
+
+        pushButton_4 = new QPushButton(centralwidget);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+
+        gridLayout->addWidget(pushButton_4, 2, 0, 1, 1);
+
+        pushButton = new QPushButton(centralwidget);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+
+        gridLayout->addWidget(pushButton, 0, 0, 1, 1);
+
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer_4, 2, 4, 1, 1);
 
         tableView = new QTableView(centralwidget);
         tableView->setObjectName(QString::fromUtf8("tableView"));
@@ -90,67 +158,12 @@ public:
         tableView->setSortingEnabled(true);
         tableView->horizontalHeader()->setDefaultSectionSize(300);
 
-        gridLayout->addWidget(tableView, 1, 0, 1, 5);
+        gridLayout->addWidget(tableView, 1, 0, 1, 6);
 
-        pushButton_3 = new QPushButton(centralwidget);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        checkBox_2 = new QCheckBox(centralwidget);
+        checkBox_2->setObjectName(QString::fromUtf8("checkBox_2"));
 
-        gridLayout->addWidget(pushButton_3, 0, 4, 1, 1);
-
-        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout->addItem(horizontalSpacer_3, 2, 1, 1, 1);
-
-        pushButton_6 = new QPushButton(centralwidget);
-        pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
-
-        gridLayout->addWidget(pushButton_6, 2, 4, 1, 1);
-
-        pushButton_4 = new QPushButton(centralwidget);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-
-        gridLayout->addWidget(pushButton_4, 2, 0, 1, 1);
-
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout->addItem(horizontalSpacer, 0, 1, 1, 1);
-
-        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout->addItem(horizontalSpacer_2, 0, 3, 1, 1);
-
-        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        gridLayout->addItem(horizontalSpacer_4, 2, 3, 1, 1);
-
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName(QString::fromUtf8("pushButton"));
-
-        gridLayout->addWidget(pushButton, 0, 0, 1, 1);
-
-        label = new QLabel(centralwidget);
-        label->setObjectName(QString::fromUtf8("label"));
-        QFont font;
-        font.setBold(true);
-        font.setWeight(75);
-        label->setFont(font);
-
-        gridLayout->addWidget(label, 3, 0, 1, 1);
-
-        lineEdit = new QLineEdit(centralwidget);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-
-        gridLayout->addWidget(lineEdit, 3, 1, 1, 1);
-
-        comboBox = new QComboBox(centralwidget);
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->setObjectName(QString::fromUtf8("comboBox"));
-
-        gridLayout->addWidget(comboBox, 3, 2, 1, 1);
+        gridLayout->addWidget(checkBox_2, 3, 3, 1, 1);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -175,12 +188,9 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         actionAbout->setText(QCoreApplication::translate("MainWindow", "About", nullptr));
+        pushButton_6->setText(QCoreApplication::translate("MainWindow", "Add", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
         pushButton_5->setText(QCoreApplication::translate("MainWindow", "Open", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("MainWindow", "Details", nullptr));
-        pushButton_6->setText(QCoreApplication::translate("MainWindow", "Add", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("MainWindow", "About", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "Save", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Filter", nullptr));
         comboBox->setItemText(0, QCoreApplication::translate("MainWindow", "Serial Number", nullptr));
         comboBox->setItemText(1, QCoreApplication::translate("MainWindow", "Gender", nullptr));
@@ -188,6 +198,11 @@ public:
         comboBox->setItemText(3, QCoreApplication::translate("MainWindow", "Field of degree education", nullptr));
         comboBox->setItemText(4, QCoreApplication::translate("MainWindow", "Salary", nullptr));
 
+        pushButton_3->setText(QCoreApplication::translate("MainWindow", "Details", nullptr));
+        checkBox->setText(QCoreApplication::translate("MainWindow", "More or equal", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("MainWindow", "About", nullptr));
+        pushButton->setText(QCoreApplication::translate("MainWindow", "Save", nullptr));
+        checkBox_2->setText(QCoreApplication::translate("MainWindow", "Less or equal", nullptr));
         menuHelp->setTitle(QCoreApplication::translate("MainWindow", "Help", nullptr));
     } // retranslateUi
 

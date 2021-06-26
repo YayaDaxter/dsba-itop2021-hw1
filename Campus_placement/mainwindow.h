@@ -40,6 +40,18 @@ private slots:
 
     void on_actionAbout_triggered();
 
+    void on_checkBox_2_pressed();
+
+    void on_checkBox_2_released();
+
+    void on_checkBox_pressed();
+
+    void on_checkBox_released();
+
+    void on_checkBox_clicked();
+
+    void on_checkBox_2_clicked();
+
 private:
     Ui::MainWindow *ui;
 

@@ -12,7 +12,6 @@ DetailWindow::DetailWindow(QWidget *parent) :
 
 void DetailWindow::setPersonDetail(Person person)
 {
-
     ui->lineEdit->setText(QString::fromStdString(person.sePercentage));
     ui->lineEdit_2->setText(QString::fromStdString(person.hsePercentage));
     ui->lineEdit_3->setText(QString::fromStdString(person.spec));
